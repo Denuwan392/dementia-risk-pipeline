@@ -1,12 +1,6 @@
+# Submission Artifacts + README
 
-Submission Artifacts + README
-
-## ✅ Submission Artifacts (Notebook Markdown Cell)
-
-## Submission Artifacts
-
-All required files for hackathon submission are organized below.  
-The pipeline is fully reproducible with the provided code, data, and environment.
+## ✅ Submission Artifacts
 
 ### Folder Structure
 ```
