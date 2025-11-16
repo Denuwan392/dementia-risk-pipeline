@@ -1,0 +1,46 @@
+{
+  "timestamp": "20251116_2224",
+  "random_seed": 42,
+  "features_used": [
+    "SEX",
+    "HISPANIC",
+    "RACE",
+    "PRIMLANG",
+    "EDUC",
+    "MARISTAT",
+    "NACCLIVS",
+    "INLIVWTH",
+    "INVISITS",
+    "INCALLS",
+    "NACCFAM",
+    "NACCOM",
+    "SMOKYRS",
+    "PACKSPER",
+    "QUITSMOK",
+    "ALCOCCAS",
+    "ALCFREQ",
+    "HOMEHOBB",
+    "PERSCARE",
+    "AGE",
+    "AGE_GROUP",
+    "EDUC_GROUP",
+    "NACCOM_MISSING",
+    "RACE_MISSING"
+  ],
+  "target": "dementia_binary",
+  "test_performance": {
+    "roc_auc": 0.970375365874091,
+    "pr_auc": 0.9494184580952737,
+    "brier_score": 0.05157991484286973
+  },
+  "model_type": "XGBoost (tuned)",
+  "constraints": "Non-medical variables only (per hackathon ID 75c118a2...)",
+  "top_features_raw": [
+    "HOMEHOBB",
+    "PERSCARE",
+    "NACCOM_MISSING",
+    "INLIVWTH",
+    "ALCOCCAS"
+  ],
+  "calibrated": true
+}
