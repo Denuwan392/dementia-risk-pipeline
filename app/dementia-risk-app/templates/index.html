@@ -1,0 +1,47 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dementia Risk Predictor</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; padding: 0 20px; }
+        h1 { color: #2c3e50; }
+        .form-group { margin: 10px 0; }
+        label { display: inline-block; width: 180px; font-weight: bold; }
+        input { width: 100px; padding: 4px; }
+        button { margin-top: 15px; padding: 8px 16px; background: #3498db; color: white; border: none; cursor: pointer; }
+        button:hover { background: #2980b9; }
+        .result { margin-top: 20px; padding: 15px; background: #f8f9fa; border-left: 4px solid #3498db; }
+        .error { color: red; background: #ffe6e6; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>🧠 Dementia Risk Prediction</h1>
+    <p>Enter patient information below:</p>
+
+    <form method="POST">
+        {% for field in fields %}
+        <div class="form-group">
+            <label for="{{ field }}">{{ field }}:</label>
+            <input type="number" id="{{ field }}" name="{{ field }}" required>
+        </div>
+        {% endfor %}
+
+        <button type="submit">Predict Risk</button>
+    </form>
+
+    {% if error %}
+    <div class="error">❌ {{ error }}</div>
+    {% endif %}
+
+    {% if result %}
+    <div class="result">
+        <h3>🧠 Prediction Result:</h3>
+        <p><strong>Dementia Risk:</strong> {{ result.risk_percent }}%</p>
+        <p><strong>Raw Probability:</strong> {{ result.raw_prob }}</p>
+        <p><strong>Risk Level:</strong> {{ result.category|safe }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
