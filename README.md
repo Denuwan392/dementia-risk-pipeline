@@ -1,5 +1,5 @@
 
-# STEP 13 — Submission Artifacts + README (ALL-IN-ONE)
+# STEP 13 — Submission Artifacts + README
 
 ## ✅ Submission Artifacts (Notebook Markdown Cell)
 
