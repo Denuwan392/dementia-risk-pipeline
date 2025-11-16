@@ -1,39 +1,3 @@
-# Submission Artifacts + README
-
-## ✅ Submission Artifacts
-
-### Folder Structure
-```
-
-dementia-risk-pipeline/
-├── data/
-│   └── raw/                     # Original dataset (as provided)
-├── models/                      # Final model + metadata
-├── metadata/                    # Feature lists, EDA outputs
-├── dementia_risk_pipeline.ipynb # Full reproducible notebook
-├── requirements.txt             # Python dependencies
-└── README.md                    # Instructions for reviewers
-
-```
-
-### How to Reproduce
-1. Create virtual environment:  
-   `python -m venv venv && source venv/bin/activate`
-
-2. Install dependencies:  
-   `pip install -r requirements.txt`
-
-3. Run notebook:  
-   `jupyter notebook dementia_risk_pipeline.ipynb`
-
-
----
-
-# 📄 README.md (Full File)
-
-Paste this entire block into your `README.md`:
-
-```markdown
 # Dementia Risk Prediction Pipeline
 
 Predicts dementia risk (0–100%) using only non-medical variables from the NACC dataset.
